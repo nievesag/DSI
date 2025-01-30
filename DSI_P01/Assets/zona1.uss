@@ -1,0 +1,20 @@
+.button {
+    align-self: center;
+    -unity-font: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=76c2e39c5182f0348a84c377e20debf6&type=3#NotInter-Regular");
+    -unity-font-style: bold;
+    color: rgb(255, 0, 44);
+    -unity-text-outline-color: rgba(255, 132, 224, 0);
+    background-color: rgb(255, 132, 224);
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    justify-content: flex-start;
+    scale: 1 1;
+}
+
+.fondo1 {
+    background-color: rgb(252, 255, 123);
+    justify-content: center;
+    align-items: center;
+}

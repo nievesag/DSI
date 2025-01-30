@@ -1,0 +1,16 @@
+.fondo3 {
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-self: stretch;
+    align-items: auto;
+}
+
+.text {
+    -unity-font-style: bold-and-italic;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: rgba(34, 255, 0, 0);
+    color: rgb(21, 203, 0);
+}
