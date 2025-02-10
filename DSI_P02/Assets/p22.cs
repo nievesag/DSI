@@ -53,7 +53,7 @@ public class p22 : MonoBehaviour
 
         pestanya_ambar.RegisterCallback<MouseDownEvent>(evt =>
         {
-            Debug.Log("Pestaña ambar");
+            Debug.Log("Pestaña ámbar");
             NoContenido();
             contenido_ambar.style.display = DisplayStyle.Flex;
         });

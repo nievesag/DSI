@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/menu3.uss?fileID=7433441132597879392&amp;guid=0f19a74e38a32ec4cb9d9ea49a91bc9f&amp;type=3#menu3" />
+    <ui:VisualElement name="contenedor" class="contenedor" style="flex-grow: 1; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;">
+        <ui:VisualElement name="item1" class="item" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="texto" style="font-size: 28px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="item2" class="item" style="flex-grow: 1; flex-direction: row; flex-wrap: nowrap; flex-basis: auto; align-items: stretch; align-self: auto; justify-content: flex-start;">
+            <ui:VisualElement name="columna1" style="flex-grow: 1;">
+                <ui:VisualElement name="caja1" class="caja" style="flex-grow: 1;" />
+                <ui:VisualElement name="caja2" class="caja" style="flex-grow: 1;" />
+                <ui:VisualElement name="caja3" class="caja" style="flex-grow: 1;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="columna2" style="flex-grow: 1;">
+                <ui:VisualElement name="caja4" class="caja" style="flex-grow: 1;" />
+                <ui:VisualElement name="caja5" class="caja" style="flex-grow: 1;" />
+                <ui:VisualElement name="caja6" class="caja" style="flex-grow: 1;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
