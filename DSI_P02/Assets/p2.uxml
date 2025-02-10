@@ -1,4 +1,38 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/menu.uss?fileID=7433441132597879392&amp;guid=0b020c84b3532bb4b8348d39b74eaca5&amp;type=3#menu" />
-    <ui:VisualElement name="menu" style="flex-grow: 1;" />
+    <ui:VisualElement style="flex-grow: 1; flex-basis: 0; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 2px;">
+        <ui:VisualElement name="top" style="flex-grow: 1; background-image: none; flex-wrap: nowrap; flex-direction: row; flex-basis: 0;">
+            <ui:VisualElement name="top1" class="azul" style="flex-grow: 1; flex-basis: 0;">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:VisualElement name="top2" class="rojo" style="flex-grow: 1; flex-basis: 0;">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:VisualElement name="top3" class="verde" style="flex-grow: 1; flex-basis: 0;">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="mid" style="flex-grow: 1; flex-direction: row; flex-basis: 0;">
+            <ui:VisualElement name="mid1" class="verde" style="flex-grow: 1; flex-basis: 0; flex-wrap: nowrap; flex-direction: column;">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="flex-basis: auto;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="mid2" class="azul" style="flex-grow: 1; flex-basis: 0;">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="flex-basis: auto;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="mid3" class="rojo" style="flex-grow: 1; flex-basis: 0;">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="flex-basis: auto;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="bottom" style="flex-grow: 1; flex-direction: row; flex-basis: 0;">
+            <ui:VisualElement name="bot1" class="rojo" style="flex-grow: 1; flex-basis: 0;">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:VisualElement name="bot2" class="verde" style="flex-grow: 1; flex-basis: 0;">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:VisualElement name="bot3" class="azul" style="flex-grow: 1; flex-basis: 0;">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
 </ui:UXML>
