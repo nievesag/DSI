@@ -8,8 +8,6 @@ using UnityEngine.UIElements;
 public class p23 : MonoBehaviour
 {
     private VisualElement item1;
-
-
     private void OnEnable()
     {
         UIDocument uidoc = GetComponent<UIDocument>();

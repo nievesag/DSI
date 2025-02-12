@@ -1,0 +1,45 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/p2%20final.uss?fileID=7433441132597879392&amp;guid=27225a33b0dd4ac479c841e888b57442&amp;type=3#p2 final" />
+    <ui:VisualElement name="titulo" style="flex-grow: 1; height: 10%; align-items: center; justify-content: center; align-self: auto; background-color: rgb(112, 81, 161);">
+        <ui:Label tabindex="-1" text="   CONJUROS DE DOT POPTROPICA" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="font-size: 35px; -unity-font-style: bold;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="contenedor" style="flex-grow: 1; height: 90%;">
+        <ui:VisualElement name="pestanyas" style="flex-grow: 1; flex-direction: row; width: auto; height: 10%;">
+            <ui:VisualElement name="pes1" class="pes1" style="flex-grow: 1; width: 50%; justify-content: center; align-items: center; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px;">
+                <ui:Label tabindex="-1" text="TRUCOS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="font-size: 30px; -unity-font-style: bold-and-italic;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="pes2" class="pes2" style="flex-grow: 1; width: 50%; align-items: center; justify-content: center; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px;">
+                <ui:Label tabindex="-1" text="NV. 1" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 30px; -unity-font-style: bold-and-italic;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="contenido" style="flex-grow: 1; height: 90%;">
+            <ui:VisualElement name="con1" class="con1" style="flex-grow: 1; flex-direction: row; justify-content: flex-start; align-items: center;">
+                <ui:VisualElement name="col1" style="flex-grow: 1; align-items: center; justify-content: center; height: 70%;">
+                    <ui:VisualElement name="t1" class="trucos" style="flex-grow: 1; align-items: center; justify-content: center; width: 80%; height: 10px;">
+                        <ui:Label tabindex="-1" text="LÁTIGO DE ESPINAS" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="t2" class="trucos" style="flex-grow: 1; justify-content: center; align-items: center; width: 80%; height: 10px;">
+                        <ui:Label tabindex="-1" text="LUCES DANZANTES" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="t3" class="trucos" style="flex-grow: 1; justify-content: center; align-items: center; width: 80%; height: 10px;">
+                        <ui:Label tabindex="-1" text="MANO DE MAGO" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="col2" style="flex-grow: 1; align-items: center; justify-content: center; height: 70%;">
+                    <ui:VisualElement name="t4" class="trucos" style="flex-grow: 1; align-items: center; justify-content: center; width: 80%;">
+                        <ui:Label tabindex="-1" text="LÁTIGO DE FUEGO" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="t5" class="trucos" style="flex-grow: 1; align-items: center; justify-content: center; width: 80%;">
+                        <ui:Label tabindex="-1" text="PRESTIDIGITACIÓN" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="t6" class="trucos" style="flex-grow: 1; align-items: center; justify-content: center; width: 80%;">
+                        <ui:Label tabindex="-1" text="LUZ" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="con2" class="con2" style="flex-grow: 1; visibility: visible; display: none; align-items: center; justify-content: center;">
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="texto" style="font-size: 40px; -unity-text-align: middle-center; align-items: center; justify-content: center;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
