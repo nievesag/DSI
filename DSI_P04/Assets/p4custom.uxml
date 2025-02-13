@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/p4custom.uss?fileID=7433441132597879392&amp;guid=3d5dadce3616bc1409e6c8d991fad2f0&amp;type=3#p4custom" />
+    <p4custom estado="0" />
+    <p4custom />
+</ui:UXML>

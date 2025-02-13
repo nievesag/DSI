@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Contenedor" style="flex-grow: 1;">
+        <ui:VisualElement name="Top" style="flex-grow: 1; background-color: rgb(255, 230, 0); align-items: flex-start; flex-direction: row; flex-wrap: nowrap; flex-shrink: 1; height: 50%;" />
+        <ui:VisualElement name="Bottom" style="flex-grow: 1; background-color: rgb(161, 255, 0); align-items: flex-start; flex-direction: row; flex-wrap: nowrap; height: 50%;" />
+    </ui:VisualElement>
+</ui:UXML>

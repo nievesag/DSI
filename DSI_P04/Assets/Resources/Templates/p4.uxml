@@ -1,0 +1,41 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="ContenedorCajas" src="project://database/Assets/ContenedorCajas.uxml?fileID=9197481963319205126&amp;guid=a2d899b3d1d39a84abac70c6f7e89985&amp;type=3#ContenedorCajas" />
+    <Style src="project://database/Assets/p4.uss?fileID=7433441132597879392&amp;guid=5c45e0452075f9b45b9ec12b90debc8e&amp;type=3#p4" />
+    <ui:VisualElement name="ContenedorCajas" style="flex-grow: 1;">
+        <ui:VisualElement name="Contenedor" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap;">
+            <ui:VisualElement name="Caja1" style="flex-grow: 1; height: 50%; width: 50%;">
+                <ui:VisualElement name="ContenedorCajas" style="width: 100%; height: 100%;">
+                    <ui:VisualElement name="Contenedor" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap;">
+                        <ui:VisualElement name="Caja1" class="caja" style="flex-grow: 1;" />
+                        <ui:VisualElement name="Caja2" class="caja" style="flex-grow: 1;" />
+                        <ui:VisualElement name="Caja3" class="caja" style="flex-grow: 1;" />
+                        <ui:VisualElement name="Caja4" class="caja" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Caja2" style="flex-grow: 1; width: 50%; height: 50%; align-items: stretch; justify-content: flex-start;">
+                <ui:Instance template="ContenedorCajas" name="ContenedorCajas" style="flex-grow: 1;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Caja3" style="flex-grow: 1; width: 50%; height: 50%;">
+                <ui:VisualElement name="ContenedorCajas" style="width: 100%; height: 100%;">
+                    <ui:VisualElement name="Contenedor" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap;">
+                        <ui:VisualElement name="Caja1" class="caja" style="flex-grow: 1;" />
+                        <ui:VisualElement name="Caja2" class="caja" style="flex-grow: 1;" />
+                        <ui:VisualElement name="Caja3" class="caja" style="flex-grow: 1;" />
+                        <ui:VisualElement name="Caja4" class="caja" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Caja4" style="flex-grow: 1; width: 50%; height: 50%;">
+                <ui:VisualElement name="ContenedorCajas" style="width: 100%; height: 100%;">
+                    <ui:VisualElement name="Contenedor" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap;">
+                        <ui:VisualElement name="Caja1" class="caja" style="flex-grow: 1;" />
+                        <ui:VisualElement name="Caja2" class="caja" style="flex-grow: 1;" />
+                        <ui:VisualElement name="Caja3" class="caja" style="flex-grow: 1;" />
+                        <ui:VisualElement name="Caja4" class="caja" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/ContenedorCajas.uss?fileID=7433441132597879392&amp;guid=ea5d7aa6cc02b944f866094fde7fc166&amp;type=3#ContenedorCajas" />
+    <ui:VisualElement name="Caja3" style="flex-grow: 1; width: 100%; height: 50%;">
+        <ui:VisualElement name="ContenedorCajas" style="flex-grow: 1; width: 130px; height: 160px;">
+            <ui:VisualElement name="Contenedor" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap;">
+                <ui:VisualElement name="Caja1" class="caja" style="flex-grow: 1;" />
+                <ui:VisualElement name="Caja2" class="caja" style="flex-grow: 1;" />
+                <ui:VisualElement name="Caja3" class="caja" style="flex-grow: 1;" />
+                <ui:VisualElement name="Caja4" class="caja" style="flex-grow: 1;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
