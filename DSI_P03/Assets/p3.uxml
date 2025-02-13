@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/p3.uss?fileID=7433441132597879392&amp;guid=c3be7086bfc81ad40a0e6334c9d74cf5&amp;type=3#p3" />
+    <ui:VisualElement name="ContenedorVerde" tabindex="2" class="verde" style="flex-grow: 1; justify-content: space-around; align-self: center;">
+        <ui:VisualElement name="ContenedorAzul" tabindex="1" class="azul" style="justify-content: center;">
+            <ui:VisualElement name="ItemAmarillo" tabindex="0" class="amarillo" style="align-self: center; justify-content: space-around;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
