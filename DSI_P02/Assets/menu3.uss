@@ -1,0 +1,53 @@
+.contenedor {
+    background-color: rgb(39, 99, 22);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-left-color: rgb(18, 65, 9);
+    border-right-color: rgb(18, 65, 9);
+    border-top-color: rgb(18, 65, 9);
+    border-bottom-color: rgb(18, 65, 9);
+}
+
+.item {
+    background-color: rgb(99, 161, 75);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    border-top-width: 6px;
+    border-right-width: 6px;
+    border-bottom-width: 6px;
+    border-left-width: 6px;
+    border-left-color: rgb(18, 82, 8);
+    border-right-color: rgb(18, 82, 8);
+    border-top-color: rgb(18, 82, 8);
+    border-bottom-color: rgb(18, 82, 8);
+}
+
+.caja {
+    background-color: rgb(155, 209, 147);
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    border-left-color: rgb(97, 161, 87);
+    border-right-color: rgb(97, 161, 87);
+    border-top-color: rgb(97, 161, 87);
+    border-bottom-color: rgb(97, 161, 87);
+}
+
+.caja:hover {
+    background-color: rgb(155, 209, 147);
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    border-left-color: rgb(97, 161, 87);
+    border-right-color: rgb(97, 161, 87);
+    border-top-color: rgb(97, 161, 87);
+    border-bottom-color: rgb(97, 161, 87);
+    scale: 1.1 1.2;
+    rotate: 3deg;
+}

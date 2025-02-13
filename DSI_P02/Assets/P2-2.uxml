@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="contenedor" style="flex-grow: 1;">
+        <ui:VisualElement name="pestanyas" style="flex-grow: 1; flex-direction: row; height: 30%; align-self: auto; flex-basis: 10%; justify-content: flex-start; -unity-background-scale-mode: stretch-to-fill; flex-wrap: nowrap; align-items: stretch;">
+            <ui:VisualElement name="azul" style="flex-grow: 1; background-color: rgb(0, 139, 255); justify-content: center; align-items: center;">
+                <ui:Label tabindex="-1" text="Azul" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 14px; -unity-font-style: bold-and-italic;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="verde" style="flex-grow: 1; background-color: rgb(138, 207, 26); justify-content: center; align-items: center;">
+                <ui:Label tabindex="-1" text="Verde" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 14px; -unity-font-style: bold-and-italic;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="ambar" style="flex-grow: 1; background-color: rgb(217, 206, 34); justify-content: center; align-items: center;">
+                <ui:Label tabindex="-1" text="Ámbar" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold-and-italic; font-size: 14px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="contenido" style="flex-grow: 1; height: 70%; flex-wrap: nowrap; flex-direction: column; flex-shrink: 1; flex-basis: auto;">
+            <ui:VisualElement name="azul" style="flex-grow: 1; background-color: rgb(0, 139, 255); display: flex; align-items: center; justify-content: center;">
+                <ui:Label tabindex="-1" text="El clio de cynthia" parse-escape-sequences="true" display-tooltip-when-elided="true" style="justify-content: center; align-items: center; -unity-font-style: bold; font-size: 20px;" />
+                <ui:Slider label="Slider Azul" high-value="100" style="width: 334px; height: 93px;" />
+                <ui:Foldout text="Foldout Azul" style="height: 227px; width: 347px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="verde" style="flex-grow: 1; background-color: rgb(138, 207, 26); display: none; align-items: center; justify-content: center;">
+                <ui:Label tabindex="-1" text="Las mechas de nieves" parse-escape-sequences="true" display-tooltip-when-elided="true" style="justify-content: center; align-items: center; -unity-font-style: bold; font-size: 20px;" />
+                <ui:Slider label="Slider Verde&#10;" high-value="100" style="width: 334px; height: 93px;" />
+                <ui:Foldout text="Foldout Verde" style="height: 227px; width: 347px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="ambar" style="flex-grow: 1; background-color: rgb(217, 206, 34); display: none; align-items: center; justify-content: center;">
+                <ui:Label tabindex="-1" text="El sol de siesta en la hiruela" parse-escape-sequences="true" display-tooltip-when-elided="true" style="justify-content: center; align-items: center; -unity-font-style: bold; font-size: 20px;" />
+                <ui:Slider label="Slider Ámbar" high-value="100" style="width: 334px; height: 93px;" />
+                <ui:Foldout text="Foldout Ámbar" style="height: 227px; width: 347px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
