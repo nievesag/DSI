@@ -1,12 +1,16 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/Elementos.uss?fileID=7433441132597879392&amp;guid=7c6ea200c049799449a30f8e51d6606a&amp;type=3#Elementos" />
-    <ui:Label tabindex="-1" text="ESCENARIOS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="-unity-font: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=fa46f043677244a4c9521effdb6af3c2&amp;type=3#NotInter-Regular&quot;); -unity-font-style: bold; font-size: 50px; -unity-text-align: middle-center; color: rgb(192, 113, 63);" />
+    <ui:Label tabindex="-1" text="ESCENARIOS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="-unity-font: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=fa46f043677244a4c9521effdb6af3c2&amp;type=3#NotInter-Regular&quot;); -unity-font-style: bold; font-size: 80px; -unity-text-align: middle-center; color: rgb(192, 113, 63);" />
     <ui:VisualElement name="Top" style="flex-grow: 1; height: 30%;" />
-    <ui:Label tabindex="-1" text="OPCIONES" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="-unity-font: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=fa46f043677244a4c9521effdb6af3c2&amp;type=3#NotInter-Regular&quot;); -unity-font-style: bold; font-size: 50px; -unity-text-align: middle-center; color: rgb(192, 113, 63);" />
+    <ui:Label tabindex="-1" text="OPCIONES" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="-unity-font: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=fa46f043677244a4c9521effdb6af3c2&amp;type=3#NotInter-Regular&quot;); -unity-font-style: bold; font-size: 80px; -unity-text-align: middle-center; color: rgb(192, 113, 63);" />
     <ui:VisualElement name="Bottom" style="flex-grow: 1; height: 70%; align-items: center; justify-content: center; align-self: auto; flex-direction: column; flex-wrap: nowrap;">
-        <ui:VisualElement name="Dificultad" style="flex-grow: 1; height: 20px;">
-            <p4custom estado="0" style="flex-direction: row;" />
+        <ui:VisualElement name="Dificultad" style="flex-grow: 1; height: 20px; align-items: center;">
+            <ui:Label tabindex="-1" text="DIFICULTAD" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 40px; -unity-font-style: bold-and-italic; color: rgb(255, 232, 57); display: flex; visibility: visible;" />
+            <p4custom estado="1" focusable="false" icon="tortuga" style="flex-direction: row;" />
         </ui:VisualElement>
-        <ui:VisualElement name="Velocidad" style="flex-grow: 1; height: 20px;" />
+        <ui:VisualElement name="Velocidad" style="flex-grow: 1; height: 20px; align-items: center;">
+            <ui:Label tabindex="-1" text="VELOCIDAD" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 40px; -unity-font-style: bold-and-italic; color: rgb(255, 232, 57); visibility: visible;" />
+            <p4custom estado="3" icon="gato" focusable="false" style="flex-direction: row; visibility: visible;" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

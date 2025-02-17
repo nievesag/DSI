@@ -15,7 +15,7 @@ public class p4custom : VisualElement
     private Color gris = new Color(0.4f, 0.4f, 0.4f);
     private Color blanco = new Color(1f, 1f, 1f);
 
-    Sprite img = Resources.Load<Sprite>("Imagenes/georgia");
+    private Sprite img;
 
     int estado;
     public int Estado
@@ -41,6 +41,8 @@ public class p4custom : VisualElement
 
     void cambiarDificultad()
     {
+        img = Resources.Load<Sprite>("Imagenes/" + Icon);
+
         // imagenes
         dif0.style.backgroundImage = new StyleBackground(img);
         dif1.style.backgroundImage = new StyleBackground(img);
@@ -124,35 +126,40 @@ public class p4custom : VisualElement
     public new class UxmlTraits : VisualElement.UxmlTraits
     {
         UxmlIntAttributeDescription myEstado = new UxmlIntAttributeDescription { name = "estado", defaultValue = 0 };
+        UxmlStringAttributeDescription myIcon = new UxmlStringAttributeDescription { name = "icon", defaultValue = " "};
 
         public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
         {
             base.Init(ve, bag, cc);
             var dificultad = ve as p4custom;
+
             dificultad.Estado = myEstado.GetValueFromBag(bag, cc);
-            Debug.Log("dificultad.Estado: " + dificultad.Estado);
+            dificultad.Icon = myIcon.GetValueFromBag(bag, cc);
+
+            //Debug.Log("dificultad.Estado: " + dificultad.Estado);
+            Debug.Log("dificultad.Icon: " + dificultad.Icon);
         }
     }
 
     public p4custom()
     {
-        dif0.style.width = 100;
-        dif0.style.height = 100;
+        dif0.style.width = 200;
+        dif0.style.height = 200;
 
-        dif1.style.width = 100;
-        dif1.style.height = 100;
+        dif1.style.width = 200;
+        dif1.style.height = 200;
 
-        dif2.style.width = 100;
-        dif2.style.height = 100;
+        dif2.style.width = 200;
+        dif2.style.height = 200;
 
-        dif3.style.width = 100;
-        dif3.style.height = 100;
+        dif3.style.width = 200;
+        dif3.style.height = 200;
 
-        dif4.style.width = 100;
-        dif4.style.height = 100;
+        dif4.style.width = 200;
+        dif4.style.height = 200;
 
-        dif5.style.width = 100;
-        dif5.style.height = 100;
+        dif5.style.width = 200;
+        dif5.style.height = 200;
 
         styleSheets.Add(Resources.Load<StyleSheet>("p4custom"));
 
@@ -170,70 +177,4 @@ public class p4custom : VisualElement
         hierarchy.Add(dif4);
         hierarchy.Add(dif5);
     }
-
-    /*
-    VisualElement panelRojo = new VisualElement();
-    VisualElement panelAmbar = new VisualElement();
-    VisualElement panelVerde = new VisualElement();
-
-    int estado;
-
-    public int Estado
-    {
-        get => estado;
-        set
-        {
-            estado = value;
-            encenderColor();
-        }
-    }
-
-    void encenderColor()
-    {
-        panelRojo.style.backgroundColor = new Color(0.27f, 0f, 0f);
-        panelAmbar.style.backgroundColor = new Color(0.27f, 0.27f, 0f);
-        panelVerde.style.backgroundColor = new Color(0f, 0.27f, 0f);
-
-        if (Estado == 0) { panelRojo.style.backgroundColor = Color.red; }
-        if (Estado == 1) { panelAmbar.style.backgroundColor = Color.yellow; }
-        if (Estado > 1) { panelVerde.style.backgroundColor = Color.green; }
-    }
-
-    public new class UxmlFactory : UxmlFactory<p4custom, UxmlTraits> { };
-
-    public new class UxmlTraits : VisualElement.UxmlTraits
-    {
-        UxmlIntAttributeDescription myEstado = new UxmlIntAttributeDescription { name = "estado", defaultValue = 0 };
-
-            public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-            {
-                base.Init(ve, bag, cc);
-                var semaforo = ve as p4custom;
-                semaforo.Estado = myEstado.GetValueFromBag(bag, cc);
-                Debug.Log("semaforo.Estado: " + semaforo.Estado);
-            }
-    }
-
-    public p4custom()
-    {
-        panelRojo.style.width = 100;
-        panelRojo.style.height = 100;
-
-        panelAmbar.style.width = 100;
-        panelAmbar.style.height = 100;
-
-        panelVerde.style.width = 100;
-        panelVerde.style.height = 100;
-
-        styleSheets.Add(Resources.Load<StyleSheet>("p4custom"));
-        
-        panelRojo.AddToClassList("panel_round");
-        panelAmbar.AddToClassList("panel_round");
-        panelVerde.AddToClassList("panel_round");
-
-        hierarchy.Add(panelRojo);
-        hierarchy.Add(panelAmbar);
-        hierarchy.Add(panelVerde);
-    }
-    */
 }
