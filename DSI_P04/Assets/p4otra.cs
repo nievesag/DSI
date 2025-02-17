@@ -13,6 +13,7 @@ public class p4otra : MonoBehaviour
         VisualElement bottom    = rootve.Q("Bottom");
 
         VisualTreeAsset template_cajas = Resources.Load<VisualTreeAsset>("Templates/ContenedorCajas");
+
         VisualElement cajasTop1        = template_cajas.Instantiate();
         VisualElement cajasTop2        = template_cajas.Instantiate();
         VisualElement cajasBottom      = template_cajas.Instantiate();
@@ -20,6 +21,16 @@ public class p4otra : MonoBehaviour
         top.Add(cajasTop1);
         top.Add(cajasTop2);
         bottom.Add(cajasBottom);
+
+        Sprite img = Resources.Load<Sprite>("Imagenes/georgia");
+
+        VisualElement caja1 = cajasTop1.Q("Caja1");
+        VisualElement caja2 = cajasTop2.Q("Caja2");
+        VisualElement caja3 = cajasBottom.Q("Caja3");
+
+        caja1.style.backgroundImage = new StyleBackground(img);
+        caja2.style.backgroundImage = new StyleBackground(img);
+        caja3.style.backgroundImage = new StyleBackground(img);
 
         /*
         for (int i = 0; i < 6; i++)
@@ -29,11 +40,5 @@ public class p4otra : MonoBehaviour
             bottom.Add(template_cajas.Instantiate());
         }
         */
-
-        Sprite img = Resources.Load<Sprite>("Imagenes/georgia.png");
-
-        VisualElement caja1 = cajasTop1.Q("Caja3").Q("ContenedorCajas").Q("Contenedor").Q("Caja1");
-
-        caja1.style.backgroundImage = new StyleBackground(img);
     }
 }
