@@ -1,8 +1,27 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/p3.uss?fileID=7433441132597879392&amp;guid=c3be7086bfc81ad40a0e6334c9d74cf5&amp;type=3#p3" />
-    <ui:VisualElement name="ContenedorPadre" tabindex="2" class="verde" style="flex-grow: 1; justify-content: space-around; align-self: center; background-color: rgb(0, 0, 0);">
-        <ui:VisualElement name="ContenedorAzul" tabindex="1" style="flex-grow: 1; align-items: center; justify-content: space-around; height: 361px; align-self: center; width: 170px;">
-            <ui:VisualElement name="ItemAmarillo" tabindex="0" style="flex-grow: 1; height: 450px; width: 51px;" />
+    <ui:VisualElement name="ContenedorPadre" tabindex="2" style="flex-grow: 1; justify-content: space-around; align-self: center; width: 100%; height: 100%; flex-direction: row;">
+        <ui:VisualElement name="ContenedorIzqda" tabindex="1" style="justify-content: center; width: 50%; height: 100%; background-color: rgb(82, 255, 82); flex-direction: row; flex-wrap: wrap-reverse; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 6px; border-right-width: 6px; border-bottom-width: 6px; border-left-width: 6px; align-items: auto; align-self: center; flex-grow: 1;">
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ContenedorDrch" tabindex="1" style="justify-content: center; width: 50%; height: 100%; background-color: rgb(9, 73, 255); border-top-width: 6px; border-right-width: 6px; border-bottom-width: 6px; border-left-width: 6px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); flex-wrap: wrap-reverse; align-self: center; align-items: center; flex-direction: row;">
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
+            <ui:VisualElement name="Item" tabindex="0" class="item" style="align-self: center; justify-content: space-around;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

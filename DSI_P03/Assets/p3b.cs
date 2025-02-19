@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,33 +10,32 @@ public class p3b : MonoBehaviour
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
-        VisualElement verde = root.Q("ContenedorVerde");
-        VisualElement azul = root.Q("ContenedorAzul");
-        VisualElement amarillo = root.Q("ItemAmarillo");
+        VisualElement izda = root.Q("ContenedorIzqda");
+        VisualElement dcha = root.Q("ContenedorDrch");
 
-        verde.RegisterCallback<MouseDownEvent>(
+        izda.AddManipulator(new p3bManipulator());
+        dcha.AddManipulator(new p3bManipulator());
+
+        
+        List<VisualElement> lveizda = izda.Children().ToList();
+        List<VisualElement> lvedcha = dcha.Children().ToList();
+        lveizda.ForEach(elem => elem.AddManipulator(new p3bManipulator()));
+        lvedcha.ForEach(elem => elem.AddManipulator(new p3bManipulator()));
+
+        izda.RegisterCallback<MouseDownEvent>(
             ev =>
             {
-                Debug.Log("“Contenedor Verde. Fase: " + ev.propagationPhase);
-                Debug.Log("“Contenedor Verde. Current target: " + (ev.currentTarget as VisualElement).name);
-                Debug.Log("“Contenedor Verde. Target: " + (ev.target as VisualElement).name);
-            }/*, TrickleDown.NoTrickleDown*/);
+                Debug.Log("Contenedor Izquierda. Fase: " + ev.propagationPhase);
+                Debug.Log("Contenedor Izquierda.Target: " + (ev.target as VisualElement).name);
+                (ev.target as VisualElement).style.backgroundColor = Color.green;
+            }, TrickleDown.TrickleDown);
 
-        azul.RegisterCallback<MouseDownEvent>(
+        dcha.RegisterCallback<MouseDownEvent>(
             ev =>
             {
-                Debug.Log("“Contenedor Azul. Fase: " + ev.propagationPhase);
-                Debug.Log("“Contenedor Azul. Current target: " + (ev.currentTarget as VisualElement).name);
-                Debug.Log("“Contenedor Azul. Target: " + (ev.target as VisualElement).name);
-            });
-
-        amarillo.RegisterCallback<MouseDownEvent>(
-            ev =>
-            {
-                Debug.Log("Contenedor Amarillo. Fase: " + ev.propagationPhase);
-                Debug.Log("“Contenedor Amarillo. Current target: " + (ev.currentTarget as VisualElement).name);
-                Debug.Log("“Contenedor Amarillo. Target: " + (ev.target as VisualElement).name);
-            });
+                Debug.Log("Contenedor Derecha. Fase: " + ev.propagationPhase);
+                Debug.Log("Contenedor Derecha. Target: " + (ev.target as VisualElement).name);
+                    (ev.target as VisualElement).style.backgroundColor = Color.blue;
+            }, TrickleDown.TrickleDown);
     }
 }
-
