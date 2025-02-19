@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="Elementos" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement name="caja0" class="caja" style="flex-grow: 1;" />
+        <ui:VisualElement name="caja1" class="caja" style="flex-grow: 1;" />
+        <ui:VisualElement name="caja2" class="caja" style="flex-grow: 1;" />
+        <ui:VisualElement name="caja3" class="caja" style="flex-grow: 1;" />
+        <ui:VisualElement name="caja4" class="caja" style="flex-grow: 1;" />
+        <ui:VisualElement name="caja5" class="caja" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>
