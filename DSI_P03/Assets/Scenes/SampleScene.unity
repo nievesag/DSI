@@ -414,9 +414,6 @@ GameObject:
   - component: {fileID: 1324826916}
   - component: {fileID: 1324826915}
   - component: {fileID: 1324826914}
-  - component: {fileID: 1324826917}
-  - component: {fileID: 1324826918}
-  - component: {fileID: 1324826919}
   m_Layer: 5
   m_Name: UIDocumentP3B
   m_TagString: Untagged
@@ -467,42 +464,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1324826917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324826913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70dc1909a04cc3542b487cfba81717ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1324826918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324826913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06548ed491a33d847ae24b7adc68226d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1324826919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324826913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf27d0f13b9c0ca4e8ef10adcdc14318, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

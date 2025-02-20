@@ -16,6 +16,13 @@ public class p3b : MonoBehaviour
         izda.AddManipulator(new p3bManipulator());
         dcha.AddManipulator(new p3bManipulator());
 
+        izda.AddManipulator(new p3bDragger());
+        dcha.AddManipulator(new p3bDragger());
+
+        izda.AddManipulator(new p3bResizer());
+        dcha.AddManipulator(new p3bResizer());
+
+
         
         List<VisualElement> lveizda = izda.Children().ToList();
         List<VisualElement> lvedcha = dcha.Children().ToList();

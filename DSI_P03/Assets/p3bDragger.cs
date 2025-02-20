@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 
 using MouseButton = UnityEngine.UIElements.MouseButton;
 
-
 public class p3bDragger : PointerManipulator
 {
     private Vector3 m_Start;
