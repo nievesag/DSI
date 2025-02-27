@@ -15,6 +15,11 @@ namespace p5c_namespace
         VisualElement tarjeta3;
         VisualElement tarjeta4;
 
+        VisualElement top1;
+        VisualElement top2;
+        VisualElement top3;
+        VisualElement top4;
+
         TextField input_nombre;
         TextField input_apellido;
 
@@ -27,6 +32,11 @@ namespace p5c_namespace
             tarjeta3 = root.Q("Tarjeta3");
             tarjeta4 = root.Q("Tarjeta4");
 
+            top1 = root.Q("top1");
+            top2 = root.Q("top2");
+            top3 = root.Q("top3");
+            top4 = root.Q("top4");
+
             input_nombre = root.Q<TextField>("InputNombre");
             input_apellido = root.Q<TextField>("InputApellido");
 
@@ -34,6 +44,9 @@ namespace p5c_namespace
 
             VisualElement panelDcha = root.Q("Dcha");
             panelDcha.RegisterCallback<ClickEvent>(seleccionTarjeta);
+
+            VisualElement panelIzda = root.Q("Izda");
+            panelIzda.RegisterCallback<ClickEvent>(seleccionImagen);
 
             input_nombre.RegisterCallback<ChangeEvent<string>>(CambioNombre);
             input_apellido.RegisterCallback<ChangeEvent<string>>(CambioApellido);
@@ -50,6 +63,10 @@ namespace p5c_namespace
         {
             selecIndividuo.Apellido = evt.newValue;
         }
+        void CambioImagen(ChangeEvent<string> evt)
+        {
+            selecIndividuo.Imagen = evt.newValue;
+        }
 
         void seleccionTarjeta(ClickEvent e)
         {
@@ -58,6 +75,11 @@ namespace p5c_namespace
 
             input_nombre.SetValueWithoutNotify(selecIndividuo.Nombre);
             input_apellido.SetValueWithoutNotify(selecIndividuo.Apellido);
+        }
+
+        void seleccionImagen(ClickEvent e)
+        {
+            input_nombre.SetValueWithoutNotify(selecIndividuo.Nombre);
         }
 
         void InitializeUI()

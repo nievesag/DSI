@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace p5c_namespace
 {
-    public class Individuo : MonoBehaviour
+    public class Individuo
     {
         public event Action Cambio;
 
@@ -35,10 +35,25 @@ namespace p5c_namespace
             }
         }
 
-        public Individuo(string nombre, string apellido)
+        private string imagen;
+        public string Imagen
+        {
+            get { return imagen; }
+            set
+            {
+                if (value != imagen)
+                {
+                    imagen = value;
+                    Cambio?.Invoke();
+                }
+            }
+        }
+
+        public Individuo(string nombre, string apellido, string imagen)
         {
             this.nombre = nombre;
             this.apellido = apellido;
+            this.imagen = imagen;
         }
     }
 }

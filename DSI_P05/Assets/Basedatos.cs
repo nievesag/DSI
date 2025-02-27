@@ -11,22 +11,26 @@ namespace p5c_namespace
 
             Individuo perico = new Individuo(
                 "Perico",
-                "Palotes"
+                "Palotes",
+                "georgia"
             );
 
             Individuo tornasol = new Individuo(
                 "Tornasol",
-                "Tornasolado"
+                "Tornasolado",
+                "filipinas"
             );
 
             Individuo luca = new Individuo(
                 "Luca", 
-                "Lucatelli"
+                "Lucatelli",
+                "china"
             );
 
             Individuo ivan = new Individuo(
                 "Ivan", 
-                "Ivanovich"
+                "Ivanovich",
+                "chile"
             );
 
             datos.Add(perico); 
