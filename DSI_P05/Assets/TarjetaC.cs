@@ -13,6 +13,7 @@ namespace p5c_namespace
 
         Label nombreLabel;
         Label apellidoLabel;
+        VisualElement top;
 
         public TarjetaC(VisualElement tr, Individuo individuo)
         {
@@ -21,6 +22,7 @@ namespace p5c_namespace
 
             nombreLabel = tr.Q<Label>("Nombre");
             apellidoLabel = tr.Q<Label>("Apellido");
+            top = tr.Q("top");
 
             tr.userData = miIndividuo;
 
@@ -38,6 +40,10 @@ namespace p5c_namespace
         {
             nombreLabel.text = miIndividuo.Nombre;
             apellidoLabel.text = miIndividuo.Apellido;
+            //top = miIndividuo.Imagen;
+
+            top.style.backgroundImage = miIndividuo.Imagen.style.backgroundImage;
+            Debug.Log(top);
         }
     }
 }

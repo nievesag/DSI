@@ -15,10 +15,14 @@ namespace p5c_namespace
         VisualElement tarjeta3;
         VisualElement tarjeta4;
 
+        /*
         VisualElement top1;
         VisualElement top2;
         VisualElement top3;
         VisualElement top4;
+        */
+
+        VisualElement[] cabezas;
 
         TextField input_nombre;
         TextField input_apellido;
@@ -32,10 +36,17 @@ namespace p5c_namespace
             tarjeta3 = root.Q("Tarjeta3");
             tarjeta4 = root.Q("Tarjeta4");
 
+            /*
             top1 = root.Q("top1");
             top2 = root.Q("top2");
             top3 = root.Q("top3");
             top4 = root.Q("top4");
+            */
+
+            cabezas = new VisualElement[3];
+            cabezas[0] = root.Q("cabeza1");
+            cabezas[1] = root.Q("cabeza2");
+            cabezas[2] = root.Q("cabeza3");
 
             input_nombre = root.Q<TextField>("InputNombre");
             input_apellido = root.Q<TextField>("InputApellido");
@@ -45,9 +56,10 @@ namespace p5c_namespace
             VisualElement panelDcha = root.Q("Dcha");
             panelDcha.RegisterCallback<ClickEvent>(seleccionTarjeta);
 
-            VisualElement panelIzda = root.Q("Izda");
-            panelIzda.RegisterCallback<ClickEvent>(seleccionImagen);
-
+            for (int i = 0; i < 3; i++)
+            {
+                cabezas[i].RegisterCallback<ClickEvent, int>(CambioImagen, i);
+            }
             input_nombre.RegisterCallback<ChangeEvent<string>>(CambioNombre);
             input_apellido.RegisterCallback<ChangeEvent<string>>(CambioApellido);
 
@@ -63,9 +75,13 @@ namespace p5c_namespace
         {
             selecIndividuo.Apellido = evt.newValue;
         }
-        void CambioImagen(ChangeEvent<string> evt)
+        void CambioImagen(ClickEvent e, int i)
         {
-            selecIndividuo.Imagen = evt.newValue;
+            Debug.Log("Seleccion imagen " + i);
+            selecIndividuo.Imagen = cabezas[i];
+
+            cabezas[i].style.unityBackgroundImageTintColor = new Color(1f, 0f, 1f, 1f);
+
         }
 
         void seleccionTarjeta(ClickEvent e)
@@ -75,11 +91,6 @@ namespace p5c_namespace
 
             input_nombre.SetValueWithoutNotify(selecIndividuo.Nombre);
             input_apellido.SetValueWithoutNotify(selecIndividuo.Apellido);
-        }
-
-        void seleccionImagen(ClickEvent e)
-        {
-            input_nombre.SetValueWithoutNotify(selecIndividuo.Nombre);
         }
 
         void InitializeUI()

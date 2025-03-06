@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 namespace p5c_namespace
 {
@@ -7,30 +8,35 @@ namespace p5c_namespace
     {
         public static List<Individuo> getData()
         {
+
+            VisualElement aux = new VisualElement();
+            aux.style.backgroundImage = new StyleBackground(Resources.Load<Sprite>("Imagenes/tortuga"));
+            aux.style.width = 100;
+
             List<Individuo> datos = new List<Individuo>();
 
             Individuo perico = new Individuo(
                 "Perico",
                 "Palotes",
-                "georgia"
+                aux
             );
 
             Individuo tornasol = new Individuo(
-                "Tornasol",
+                "Torno",
                 "Tornasolado",
-                "filipinas"
+                aux
             );
 
             Individuo luca = new Individuo(
                 "Luca", 
                 "Lucatelli",
-                "china"
+                aux
             );
 
             Individuo ivan = new Individuo(
                 "Ivan", 
                 "Ivanovich",
-                "chile"
+                aux
             );
 
             datos.Add(perico); 
