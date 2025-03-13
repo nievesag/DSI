@@ -1,14 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.UIElements;
-
-namespace p5c_namespace
+namespace Lab5c namespace
 {
     public class Basedatos
     {
         public static List<Individuo> getData()
         {
-
             List<Individuo> datos = new List<Individuo>();
 
             Individuo perico = new Individuo(
@@ -17,7 +14,7 @@ namespace p5c_namespace
             );
 
             Individuo tornasol = new Individuo(
-                "Torno",
+                "Tornasol",
                 "Tornasolado"
             );
 

@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/cabeza.uss?fileID=7433441132597879392&amp;guid=3aae96dd8a0741443b76c2a793c0fa10&amp;type=3#cabeza" />
+    <ui:VisualElement name="contenedor" style="flex-grow: 1; flex-direction: row; background-color: rgb(188, 98, 255);">
+        <ui:VisualElement name="izda" style="flex-grow: 1; width: 30%; background-color: rgb(255, 252, 136);">
+            <ui:VisualElement name="top" style="flex-grow: 1; flex-direction: row;">
+                <ui:VisualElement name="cabeza1" class="cabeza" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Imagenes/madrid.png?fileID=2800000&amp;guid=8c6fad7c69629a844b15164b7e20ade8&amp;type=3#madrid&quot;);" />
+                <ui:VisualElement name="cabeza2" class="cabeza" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Imagenes/cadiz.png?fileID=2800000&amp;guid=82016a4cae3a61f40a88cdf9ead8a1dc&amp;type=3#cadiz&quot;);" />
+                <ui:VisualElement name="cabeza3" class="cabeza" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Imagenes/chile.png?fileID=2800000&amp;guid=f0435484affcaa34d937a7781ed7467c&amp;type=3#chile&quot;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="mid-nombre" style="flex-grow: 1;">
+                <ui:TextField picking-mode="Ignore" label="Nombre" name="InputNombre" password="false" />
+            </ui:VisualElement>
+            <ui:VisualElement name="mid-apellido" style="flex-grow: 1;">
+                <ui:TextField picking-mode="Ignore" label="Apellido" name="InputApellido" readonly="false" />
+            </ui:VisualElement>
+            <ui:VisualElement name="bottom" style="flex-grow: 1;">
+                <ui:Toggle label="Modificar" name="ToggleModificar" />
+                <ui:Button text="..." parse-escape-sequences="true" display-tooltip-when-elided="true" name="BotonCrear" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Dcha" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start; align-self: stretch;" />
+    </ui:VisualElement>
+</ui:UXML>

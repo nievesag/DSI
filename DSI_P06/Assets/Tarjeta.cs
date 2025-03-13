@@ -6,7 +6,7 @@ using Label = UnityEngine.UIElements.Label;
 
 namespace p5c_namespace
 {
-    public class TarjetaC
+    public class Tarjeta
     {
         Individuo miIndividuo;
         VisualElement tarjetaRoot;
@@ -14,20 +14,13 @@ namespace p5c_namespace
         Label nombreLabel;
         Label apellidoLabel;
 
-        public TarjetaC(VisualElement tr, Individuo individuo)
+        public Tarjeta(VisualElement tr, Individuo individuo)
         {
-            this.tarjetaRoot = tr;
-            this.miIndividuo = individuo;
+            tarjetaRoot = tr;
+            miIndividuo = individuo;
 
             nombreLabel = tr.Q<Label>("Nombre");
             apellidoLabel = tr.Q<Label>("Apellido");
-
-            tr.userData = miIndividuo;
-
-            tr
-                    .Query(className: "tarjeta")
-                    .Descendents<VisualElement>()
-                    .ForEach(elem => elem.pickingMode = PickingMode.Ignore);
 
             UpdateUI();
 

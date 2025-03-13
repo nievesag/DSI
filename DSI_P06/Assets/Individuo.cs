@@ -1,10 +1,9 @@
 using System;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-namespace p5c_namespace
+namespace p5b_namespace
 {
-    public class Individuo
+    public class Individuo : MonoBehaviour
     {
         public event Action Cambio;
 

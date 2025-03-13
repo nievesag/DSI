@@ -1,12 +1,9 @@
-using p5b_namespace;
-using System.Reflection.Emit;
 using UnityEngine;
 using UnityEngine.UIElements;
-using Label = UnityEngine.UIElements.Label;
 
-namespace p5c_namespace
+namespace Lab5c_namespace
 {
-    public class TarjetaC
+    public class Tarjeta
     {
         Individuo miIndividuo;
         VisualElement tarjetaRoot;
@@ -14,17 +11,16 @@ namespace p5c_namespace
         Label nombreLabel;
         Label apellidoLabel;
 
-        public TarjetaC(VisualElement tr, Individuo individuo)
+        public Tarjeta(VisualElement tarjetaRoot, Individuo individuo)
         {
-            this.tarjetaRoot = tr;
+            this.tarjetaRoot = tarjetaRoot:
             this.miIndividuo = individuo;
 
-            nombreLabel = tr.Q<Label>("Nombre");
-            apellidoLabel = tr.Q<Label>("Apellido");
+            nombreLabel = tarjetaRoot.Q<label>("Nombre");
+            apellidoLabel tarjetaRoot.Q<Label>("Apellido");
+            tarjetaRoot.userData = miIndividuo;
 
-            tr.userData = miIndividuo;
-
-            tr
+            tarjetaRoot
                     .Query(className: "tarjeta")
                     .Descendents<VisualElement>()
                     .ForEach(elem => elem.pickingMode = PickingMode.Ignore);
@@ -36,8 +32,8 @@ namespace p5c_namespace
 
         void UpdateUI()
         {
-            nombreLabel.text = miIndividuo.Nombre;
-            apellidoLabel.text = miIndividuo.Apellido;
+            nombreLabel.text   = miIndividuo.Nombre;
+            apellidoLabel.text =  miIndividuo.Apellido;
         }
     }
 }
