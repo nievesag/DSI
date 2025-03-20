@@ -1,13 +1,14 @@
 using System;
 using UnityEngine;
 
-namespace p5b_namespace
+namespace p6_namespace
 {
+    [System.Serializable]
     public class Individuo : MonoBehaviour
     {
         public event Action Cambio;
 
-        private string nombre;
+        [SerializeField] private string nombre;
         public string Nombre
         {
             get { return nombre; }
@@ -21,7 +22,7 @@ namespace p5b_namespace
             }
         }
 
-        private string apellido;
+        [SerializeField] private string apellido;
         public string Apellido
         {
             get { return apellido; }
@@ -37,6 +38,7 @@ namespace p5b_namespace
 
         public Individuo(string nombre, string apellido)
         {
+            Debug.Log("Individuo creado");
             this.nombre = nombre;
             this.apellido = apellido;
         }

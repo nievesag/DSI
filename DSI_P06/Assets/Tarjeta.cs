@@ -1,10 +1,10 @@
-using p5b_namespace;
+using p6_namespace;
 using System.Reflection.Emit;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Label = UnityEngine.UIElements.Label;
 
-namespace p5c_namespace
+namespace p6_namespace
 {
     public class Tarjeta
     {
@@ -21,6 +21,7 @@ namespace p5c_namespace
 
             nombreLabel = tr.Q<Label>("Nombre");
             apellidoLabel = tr.Q<Label>("Apellido");
+            tarjetaRoot.userData = miIndividuo;
 
             UpdateUI();
 
