@@ -11,3 +11,5 @@ Práctica 5 x|[carpeta](https://github.com/nievesag/DSI/tree/main/DSI_P05)|
 Práctica 6|[carpeta](https://github.com/nievesag/DSI/tree/main/DSI_P06)|
 Práctica 7 x|[carpeta](https://github.com/nievesag/DSI/blob/main/ENTREGAS/ENTREGA%20DSI_P07%20Mikele%20y%20Nieves.zip)|
 PROYECTO FINAL|[carpeta]()|
+
+[ENTREGAS](https://github.com/nievesag/DSI/tree/main/ENTREGAS)
