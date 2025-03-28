@@ -15,7 +15,8 @@
             </ui:VisualElement>
             <ui:VisualElement name="bottom" style="flex-grow: 1;">
                 <ui:Toggle label="Modificar" name="ToggleModificar" />
-                <ui:Button text="..." parse-escape-sequences="true" display-tooltip-when-elided="true" name="BotonCrear" />
+                <ui:Button text="..." parse-escape-sequences="true" display-tooltip-when-elided="true" name="BotonCrear" style="background-color: rgb(227, 190, 255);" />
+                <ui:Button text="Guardar" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BotonGuardar" style="width: 50%; align-self: flex-end; margin-top: 20px; background-color: rgb(227, 190, 255);" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Dcha" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start; align-self: stretch;" />

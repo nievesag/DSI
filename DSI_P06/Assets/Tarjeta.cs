@@ -9,7 +9,7 @@ namespace p6_namespace
     public class Tarjeta
     {
         Individuo miIndividuo;
-        VisualElement tarjetaRoot;
+        public VisualElement tarjetaRoot;
 
         Label nombreLabel;
         Label apellidoLabel;

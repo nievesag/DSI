@@ -7,9 +7,11 @@ namespace p6_namespace
 {
     public static class JsonHelperIndividuo
     {
-        public static List<Individuo> FromJson<Individuo>(string json)
+        public static List<Individuo> FromJson<Individuo>(string jsonTxt)
         {
-            ListaIndividuo<Individuo> listaIndividuo = JsonUtility.FromJson<ListaIndividuo<Individuo>>(json);
+
+            ListaIndividuo<Individuo> listaIndividuo = JsonUtility.FromJson<ListaIndividuo<Individuo>>(jsonTxt);
+
             return listaIndividuo.Individuos; 
         }
 
@@ -17,17 +19,33 @@ namespace p6_namespace
         {
             ListaIndividuo<Individuo> listaIndividuo = new ListaIndividuo<Individuo>();
             listaIndividuo.Individuos = lista;
-            return JsonUtility.ToJson(listaIndividuo);
+            string jsonTxt = "{\n\"Individuos\": [\n";
+            foreach (Individuo i in lista)
+            {
+                jsonTxt += JsonUtility.ToJson(i);
+                jsonTxt += ",\n";
+            }
+            jsonTxt = jsonTxt.Substring(0, jsonTxt.Length - 2);
+            jsonTxt += "\n]\n}";
+            return jsonTxt;
         }
         public static string ToJson<Individuo>(List<Individuo> lista, bool prettyPrint)
         {
             ListaIndividuo<Individuo> listaIndividuo = new ListaIndividuo<Individuo>();
             listaIndividuo.Individuos = lista;
-            return JsonUtility.ToJson(listaIndividuo, prettyPrint);
+            string jsonTxt = "{\n\"Individuos\": [\n";
+            foreach (Individuo i in lista)
+            {
+                jsonTxt += JsonUtility.ToJson(i, prettyPrint);
+                jsonTxt += ",\n";
+            }
+            jsonTxt = jsonTxt.Substring(0, jsonTxt.Length - 2);
+            jsonTxt += "\n]\n}";
+            return jsonTxt;
         }
 
         [System.Serializable]
-        private class ListaIndividuo<Individuo>
+        public class ListaIndividuo<Individuo>
         {
             [SerializeField]
             public List<Individuo> Individuos;
