@@ -9,9 +9,7 @@ namespace p6_namespace
     {
         public static List<Individuo> FromJson<Individuo>(string jsonTxt)
         {
-
             ListaIndividuo<Individuo> listaIndividuo = JsonUtility.FromJson<ListaIndividuo<Individuo>>(jsonTxt);
-
             return listaIndividuo.Individuos; 
         }
 

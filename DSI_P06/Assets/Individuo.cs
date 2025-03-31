@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace p6_namespace
 {
@@ -8,7 +9,7 @@ namespace p6_namespace
     {
         public event Action Cambio;
 
-        [SerializeField] private string nombre;
+        
         public string Nombre
         {
             get { return nombre; }
@@ -21,8 +22,9 @@ namespace p6_namespace
                 }
             }
         }
+        [FormerlySerializedAs("Nombre")]
+        [SerializeField] private string nombre;
 
-        [SerializeField] private string apellido;
         public string Apellido
         {
             get { return apellido; }
@@ -35,6 +37,9 @@ namespace p6_namespace
                 }
             }
         }
+        [FormerlySerializedAs("Apellido")]
+        [SerializeField] private string apellido;
+
 
         public Individuo(string nombre, string apellido)
         {
