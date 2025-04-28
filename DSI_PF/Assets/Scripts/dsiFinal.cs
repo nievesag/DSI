@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class dsiFinal : MonoBehaviour
 {
+    VisualElement objDeco1; //slider
+    VisualElement objDeco2; //velas
 
     VisualElement cakeTaste;
     Slider sliderR;
@@ -21,9 +25,6 @@ public class dsiFinal : MonoBehaviour
         sliderG = root.Q<Slider>("SliderG");
         sliderB = root.Q<Slider>("SliderB");
 
-        Debug.Log("cakeTaste: " + cakeTaste);
-        Debug.Log("sliderR: " + sliderR);
-
         sliderR.RegisterCallback<ChangeEvent<float>>((evt) =>
         {
             cakeTaste.style.backgroundColor = new StyleColor(new Color(sliderR.value / 255f, sliderG.value / 255f, sliderB.value / 255f, 0.4f));
@@ -36,12 +37,19 @@ public class dsiFinal : MonoBehaviour
         {
             cakeTaste.style.backgroundColor = new StyleColor(new Color(sliderR.value / 255f, sliderG.value / 255f, sliderB.value / 255f, 0.4f));        
         });
-    }
 
-    void ChangeColor(ChangeEvent<int> evt)
-    {
-        Debug.Log("ChangeColor");
-        cakeTaste.style.backgroundColor = new StyleColor(new Color(sliderR.value / 255f, sliderG.value / 255f, sliderB.value / 255f));
+        objDeco1 = root.Q("ObjDeco1");
+        List<VisualElement> oD1List = objDeco1.Children().ToList();
+        objDeco1.RegisterCallback<MouseDownEvent>(
+            ev =>
+            {
+                (ev.target as VisualElement).style.unityBackgroundImageTintColor = Color.green;
+            });
+
+
+        objDeco2 = root.Q("MenuDeco2");
+        List<VisualElement> oD2List = objDeco2.Children().ToList();
+        oD2List.ForEach(elem => elem.AddManipulator(new Dragger()));
     }
 
     // Update is called once per frame

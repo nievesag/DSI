@@ -6,16 +6,15 @@ using UnityEngine.UIElements;
 
 using MouseButton = UnityEngine.UIElements.MouseButton;
 
-public class p3bDragger : PointerManipulator
+public class Dragger : PointerManipulator
 {
-    private Vector3 m_Start;
+    private Vector2 m_Start;
     protected bool m_Active;
     private int m_PointerId;
     private Vector2 m_StartSize;
 
-    public p3bDragger()
+    public Dragger()
     {
-        Debug.Log("CONSTRUCTORA DEL DRAGGER");
         m_PointerId = -1;
         activators.Add(new ManipulatorActivationFilter { button = MouseButton.LeftMouse });
         m_Active = false;
@@ -45,7 +44,7 @@ public class p3bDragger : PointerManipulator
 
         if (CanStartManipulation(e))
         {
-            m_Start = e.localPosition;
+            m_Start = e.originalMousePosition;
             m_PointerId = e.pointerId;
 
             m_Active = true;
@@ -56,10 +55,10 @@ public class p3bDragger : PointerManipulator
 
     protected void OnPointerMove(PointerMoveEvent e)
     {
-        if (!m_Active || !target.HasPointerCapture(m_PointerId)) 
+        if (!m_Active || !target.HasPointerCapture(m_PointerId))
             return;
 
-        Vector2 diff = e.localPosition - m_Start;
+        Vector2 diff = e.originalMousePosition - m_Start;
 
         target.style.top = target.layout.y + diff.y;
         target.style.left = target.layout.x + diff.x;

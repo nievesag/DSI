@@ -9,15 +9,31 @@
             </ui:VisualElement>
             <ui:VisualElement name="MenuDeco1" style="flex-grow: 1;">
                 <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="ScrollView" style="flex-grow: 0;">
-                    <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap; align-self: flex-start;">
-                        <ui:VisualElement style="flex-grow: 1; align-self: flex-start; background-image: resource(&apos;Images/gato&apos;); width: 50px; height: 100px;" />
-                        <ui:VisualElement style="flex-grow: 1; align-self: flex-start; background-image: resource(&apos;Images/gato&apos;); width: 50px; height: 100px;" />
-                        <ui:VisualElement style="flex-grow: 1; align-self: flex-start; background-image: resource(&apos;Images/gato&apos;); width: 50px; height: 100px;" />
-                        <ui:VisualElement style="flex-grow: 1; align-self: flex-start; background-image: resource(&apos;Images/gato&apos;); width: 50px; height: 100px;" />
+                    <ui:VisualElement name="ObjDeco1" style="flex-grow: 1; flex-direction: row; flex-wrap: nowrap; align-self: flex-start;">
+                        <ui:VisualElement name="gato0" class="deco" />
+                        <ui:VisualElement name="gato1" class="deco" />
+                        <ui:VisualElement name="gato2" class="deco" />
+                        <ui:VisualElement name="gato3" class="deco" />
+                        <ui:VisualElement class="deco" />
+                        <ui:VisualElement class="deco" />
+                        <ui:VisualElement class="deco" />
+                        <ui:VisualElement class="deco" />
+                        <ui:VisualElement class="deco" />
+                        <ui:VisualElement class="deco" />
+                        <ui:VisualElement class="deco" />
+                        <ui:VisualElement class="deco" />
+                        <ui:VisualElement class="deco" />
+                        <ui:VisualElement class="deco" />
                     </ui:VisualElement>
                 </ui:ScrollView>
             </ui:VisualElement>
-            <ui:VisualElement name="MenuDeco2" style="flex-grow: 1;" />
+            <ui:VisualElement name="MenuDeco2" style="flex-grow: 1; flex-direction: row;">
+                <ui:VisualElement class="vela" style="flex-grow: 1;" />
+                <ui:VisualElement class="vela" style="flex-grow: 1;" />
+                <ui:VisualElement class="vela" style="flex-grow: 1;" />
+                <ui:VisualElement class="vela" style="flex-grow: 1;" />
+                <ui:VisualElement class="vela" style="flex-grow: 1;" />
+            </ui:VisualElement>
             <ui:VisualElement name="MenuEtiqueta" style="flex-grow: 1; flex-direction: row;">
                 <ui:DropdownField label="Dropdown" />
                 <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" />

@@ -1,3 +1,19 @@
 .tarta {
     background-color: rgba(255, 192, 222, 0.09);
 }
+
+.deco {
+    background-color: rgba(255, 192, 222, 0.09);
+    width: 200px;
+    background-image: resource('Images/gato');
+    height: 100px;
+}
+
+.vela {
+    width: 5px;
+    background-color: rgb(255, 192, 23);
+    margin-right: 10px;
+    margin-left: 10px;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+}
