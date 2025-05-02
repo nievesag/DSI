@@ -10,10 +10,13 @@
 }
 
 .vela {
-    width: 5px;
-    background-color: rgb(255, 192, 23);
-    margin-right: 10px;
-    margin-left: 10px;
+    width: 80px;
+    background-color: rgba(255, 192, 23, 0);
+    margin-right: 0;
+    margin-left: 0;
     flex-shrink: 1;
     flex-wrap: wrap;
+    background-image: resource('Images/vela');
+    position: absolute;
+    height: 140px;
 }

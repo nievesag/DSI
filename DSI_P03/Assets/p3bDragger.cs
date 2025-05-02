@@ -15,7 +15,6 @@ public class p3bDragger : PointerManipulator
 
     public p3bDragger()
     {
-        Debug.Log("CONSTRUCTORA DEL DRAGGER");
         m_PointerId = -1;
         activators.Add(new ManipulatorActivationFilter { button = MouseButton.LeftMouse });
         m_Active = false;
