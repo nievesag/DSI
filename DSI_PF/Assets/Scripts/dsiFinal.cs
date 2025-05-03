@@ -48,15 +48,24 @@ public class dsiFinal : MonoBehaviour
                     (ev.target as VisualElement).style.unityBackgroundImageTintColor = Color.white;
                     root.Q("CakeFull").style.unityBackgroundImageTintColor = Color.white;
                 }
-                else //no habia sido seleccionado
+                else // no habia sido seleccionado
                 {
                     (ev.target as VisualElement).style.unityBackgroundImageTintColor = Color.green;
                     root.Q("CakeFull").style.unityBackgroundImageTintColor = Color.green;
+
+                    for (int i = 0; i < objDeco1.childCount; i++)
+                    {
+                        if ((objDeco1[i].style.unityBackgroundImageTintColor == Color.green) &&
+                            ((ev.target as VisualElement) != objDeco1[i]))
+                        {
+                            objDeco1[i].style.unityBackgroundImageTintColor = Color.white;
+                        }
+                    }
                 }
             });
 
 
-        objDeco2 = root.Q("MenuDeco2");
+        objDeco2 = root.Q("velas");
         List<VisualElement> oD2List = objDeco2.Children().ToList();
         oD2List.ForEach(elem => elem.AddManipulator(new Dragger()));
     }
