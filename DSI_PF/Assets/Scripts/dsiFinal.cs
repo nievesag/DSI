@@ -4,19 +4,24 @@ using System.Linq;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static Unity.VisualScripting.LudiqRootObjectEditor;
 
 public class dsiFinal : MonoBehaviour
 {
-    VisualElement objDeco1; // decoraciones
-    VisualElement objDeco2; // velas
+    VisualElement objDeco1;     // decoraciones
+    VisualElement objDeco2;     // velas
 
-    VisualElement tarjeta; // tarjeta
+    VisualElement tarjeta;      // -- tarjeta
     DropdownField tipoTarjeta; 
 
-    VisualElement cakeTaste; // sabor tarta
+    VisualElement cakeTaste;    // -- sabor tarta
     Slider sliderR;
     Slider sliderG;
     Slider sliderB;
+
+    TextField inputNombre;      // -- guardar tarta
+    DropdownField cargarTarta;
+    private Button guardarTarta;
 
     // Start is called before the first frame update
     void Start()
@@ -100,6 +105,22 @@ public class dsiFinal : MonoBehaviour
             {
                 tarjeta.style.backgroundImage = new StyleBackground(punki);
             }
+        });
+
+        // ------- Guardar tarta
+        inputNombre = root.Q<TextField>("NombreTarta");
+        cargarTarta = root.Q<DropdownField>("Cargar");
+        guardarTarta = root.Q<Button>("Guardar");
+        List<string> nombres = new List<string>();
+
+        guardarTarta.RegisterCallback<ClickEvent>(x =>
+        {
+            cargarTarta.choices.Add(nombres.Last());
+        });
+
+        inputNombre.RegisterCallback<ChangeEvent<string>>(x =>
+        {
+            nombres.Add(x.newValue);
         });
     }
 
