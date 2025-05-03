@@ -20,3 +20,59 @@
     position: absolute;
     height: 140px;
 }
+
+.button {
+    background-color: rgb(238, 55, 55);
+    -unity-text-outline-color: rgb(243, 0, 0);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left-color: rgb(251, 180, 242);
+    border-right-color: rgb(251, 180, 242);
+    border-top-color: rgb(251, 180, 242);
+    border-bottom-color: rgb(251, 180, 242);
+}
+
+.zone1 {
+    align-items: center;
+    justify-content: flex-start;
+    align-self: auto;
+    background-color: rgb(246, 214, 242);
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+}
+
+.zones {
+    background-color: rgb(255, 180, 246);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 11px;
+    margin-right: 20px;
+    margin-bottom: 11px;
+    margin-left: 20px;
+    padding-top: 13px;
+    padding-right: 13px;
+    padding-bottom: 13px;
+    padding-left: 13px;
+}
+
+.zonesNombre {
+    background-color: rgb(255, 104, 159);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 11px;
+    margin-right: 20px;
+    margin-bottom: 11px;
+    margin-left: 20px;
+    padding-top: 13px;
+    padding-right: 13px;
+    padding-bottom: 13px;
+    padding-left: 13px;
+}
