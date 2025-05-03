@@ -22,7 +22,7 @@
 }
 
 .button {
-    background-color: rgb(238, 55, 55);
+    background-color: rgb(251, 180, 242);
     -unity-text-outline-color: rgb(243, 0, 0);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -77,6 +77,14 @@
     padding-left: 13px;
 }
 
+.deco:hover {
+    background-color: rgba(255, 192, 222, 0.09);
+    width: 200px;
+    background-image: resource('Images/gato');
+    height: 100px;
+    -unity-background-image-tint-color: rgba(255, 104, 159, 0.64);
+}
+
 .button:hover {
     background-color: rgb(238, 55, 55);
     -unity-text-outline-color: rgb(243, 0, 0);
@@ -90,12 +98,4 @@
     border-bottom-color: rgb(251, 180, 242);
     rotate: -1deg;
     scale: 1.05 1.05;
-}
-
-.deco:hover {
-    background-color: rgba(255, 192, 222, 0.09);
-    width: 200px;
-    background-image: resource('Images/gato');
-    height: 100px;
-    -unity-background-image-tint-color: rgba(255, 104, 159, 0.64);
 }

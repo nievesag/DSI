@@ -11,7 +11,7 @@ public class dsiFinal : MonoBehaviour
     VisualElement objDeco1;     // decoraciones
     VisualElement objDeco2;     // velas
 
-    VisualElement tarjeta;      // -- tarjeta
+    Label tarjeta;      // -- tarjeta
     DropdownField tipoTarjeta; 
 
     VisualElement cakeTaste;    // -- sabor tarta
@@ -20,8 +20,10 @@ public class dsiFinal : MonoBehaviour
     Slider sliderB;
 
     TextField inputNombre;      // -- guardar tarta
-    DropdownField cargarTarta;
-    private Button guardarTarta;
+    DropdownField cargarNombre;
+    Button guardarTarta;
+    Button cargarTarta;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,9 @@ public class dsiFinal : MonoBehaviour
         sliderR = root.Q<Slider>("SliderR");
         sliderG = root.Q<Slider>("SliderG");
         sliderB = root.Q<Slider>("SliderB");
+
+        cakeTaste.style.backgroundColor
+            = new StyleColor(new Color(0f, 0f, 0f, 0.4f));
 
         sliderR.RegisterCallback<ChangeEvent<float>>((evt) => {
             cakeTaste.style.backgroundColor 
@@ -109,13 +114,25 @@ public class dsiFinal : MonoBehaviour
 
         // ------- Guardar tarta
         inputNombre = root.Q<TextField>("NombreTarta");
-        cargarTarta = root.Q<DropdownField>("Cargar");
+        cargarNombre = root.Q<DropdownField>("Cargar");
         guardarTarta = root.Q<Button>("Guardar");
+        cargarTarta = root.Q<Button>("CargarButton");
         List<string> nombres = new List<string>();
 
         guardarTarta.RegisterCallback<ClickEvent>(x =>
         {
-            cargarTarta.choices.Add(nombres.Last());
+            if ((nombres.Count() != 0) && (nombres.Last() != ""))
+            {
+                cargarNombre.choices.Add(nombres.Last());
+                tarjeta.text = nombres.Last();
+            }
+        });
+
+        cargarTarta.RegisterCallback<ClickEvent>(x =>
+        {
+            {
+                tarjeta.text = cargarNombre.choices[cargarNombre.index];
+            }
         });
 
         inputNombre.RegisterCallback<ChangeEvent<string>>(x =>
