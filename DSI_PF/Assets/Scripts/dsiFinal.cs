@@ -43,7 +43,16 @@ public class dsiFinal : MonoBehaviour
         objDeco1.RegisterCallback<MouseDownEvent>(
             ev =>
             {
-                (ev.target as VisualElement).style.unityBackgroundImageTintColor = Color.green;
+                if ((ev.target as VisualElement).style.unityBackgroundImageTintColor == Color.green) //ha sido seleccionado antes
+                {
+                    (ev.target as VisualElement).style.unityBackgroundImageTintColor = Color.white;
+                    root.Q("CakeFull").style.unityBackgroundImageTintColor = Color.white;
+                }
+                else //no habia sido seleccionado
+                {
+                    (ev.target as VisualElement).style.unityBackgroundImageTintColor = Color.green;
+                    root.Q("CakeFull").style.unityBackgroundImageTintColor = Color.green;
+                }
             });
 
 

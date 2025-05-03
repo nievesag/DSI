@@ -47,7 +47,7 @@
         <ui:VisualElement name="CakeZone" style="flex-grow: 1; flex-direction: column-reverse; flex-wrap: nowrap;">
             <ui:VisualElement name="CakeFull" style="flex-grow: 1; flex-direction: column; height: 80%; background-image: resource(&apos;Images/tarta&apos;); width: 100%; -unity-background-scale-mode: scale-to-fit; justify-content: flex-start; align-items: flex-start; align-self: flex-start; top: 1px;">
                 <ui:VisualElement name="CakeCandle" class="tarta" style="width: 100%; flex-grow: 0; height: 20%;" />
-                <ui:VisualElement name="CakeTop" class="tarta" style="width: 44%; flex-grow: 0; height: 20%; align-self: center;" />
+                <ui:VisualElement name="CakeTop" class="tarta" style="width: 44%; flex-grow: 0; height: 20%; align-self: center; background-image: none; scale: 1 1; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; -unity-slice-scale: 5px;" />
                 <ui:VisualElement name="CakeMid" class="tarta" style="flex-grow: 0; width: 63%; height: 26%; align-self: center;" />
                 <ui:VisualElement name="CakeBottom" class="tarta" style="flex-grow: 0; width: 93%; height: 34%; align-self: center;">
                     <ui:VisualElement name="CakeTaste" style="flex-grow: 0; flex-direction: column; height: 105%; background-image: none; width: 17%; -unity-background-scale-mode: scale-to-fit; justify-content: flex-start; align-items: flex-start; align-self: flex-start; left: 22%; background-color: rgba(255, 255, 255, 0.58); top: -4px; -unity-text-outline-color: rgba(0, 0, 0, 0);" />
