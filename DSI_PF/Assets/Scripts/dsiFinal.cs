@@ -39,6 +39,7 @@ public class dsiFinal : MonoBehaviour
     VisualElement sirope;       // 8
     VisualElement nata;         // 9
     VisualElement chocolate;    // 10
+    private Color rosa = new Color(1f, 0.408f, 0.624f, 0.72f);
 
 
     // Start is called before the first frame update
@@ -85,25 +86,56 @@ public class dsiFinal : MonoBehaviour
         nata = root.Q("nata");              // 9
         chocolate = root.Q("chocolate");    // 10
 
-        // para ocultar =>
-        // chocolate.style.visibility = Visibility.Hidden;
-
         List<VisualElement> oD1List = objDeco1.Children().ToList();
         objDeco1.RegisterCallback<MouseDownEvent>(
         ev =>
         {
             // ha sido seleccionado antes
-            if ((ev.target as VisualElement).style.unityBackgroundImageTintColor == Color.green) 
+            if ((ev.target as VisualElement).style.unityBackgroundImageTintColor == rosa) 
             {
                 (ev.target as VisualElement).style.unityBackgroundImageTintColor = Color.white;
-                root.Q("CakeFull").style.unityBackgroundImageTintColor = Color.white;
+
+                VisualElement aux = null;
+                switch ((ev.target as VisualElement).name)
+                {
+                    case "00": aux = nata; break;
+                    case "01": aux = chocolate; break;
+                    case "02": aux = sirope; break;
+                    case "03": aux = fresa; break;
+                    case "04": aux = cereza; break;
+                    case "05": aux = arandanos; break;
+                    case "06": aux = flor0; break;
+                    case "07": aux = flor1; break;
+                    case "08": aux = flor2; break;
+                    case "09": aux = estrella0; break;
+                    case "010": aux = estrella1; break;
+                }
+                aux.style.visibility = Visibility.Hidden; // se oculta
+
             }
             // no ha sido seleccionado
             else
             {
-                (ev.target as VisualElement).style.unityBackgroundImageTintColor = Color.green;
-                root.Q("CakeFull").style.unityBackgroundImageTintColor = Color.green;
+                (ev.target as VisualElement).style.unityBackgroundImageTintColor = rosa;
 
+                VisualElement aux = null;
+                switch ((ev.target as VisualElement).name)
+                {
+                    case "00": aux = nata; break;
+                    case "01": aux = chocolate; break;
+                    case "02": aux = sirope; break;
+                    case "03": aux = fresa; break;
+                    case "04": aux = cereza; break;
+                    case "05": aux = arandanos; break;
+                    case "06": aux = flor0; break;
+                    case "07": aux = flor1; break;
+                    case "08": aux = flor2; break;
+                    case "09": aux = estrella0; break;
+                    case "010": aux = estrella1; break;
+                }
+                aux.style.visibility = Visibility.Visible; // se muestra
+
+                // limpia los ya seleccionados (deja solo el ultimo)
                 for (int i = 0; i < objDeco1.childCount; i++)
                 {
                     if ((objDeco1[i].style.unityBackgroundImageTintColor == Color.green) &&

@@ -3,22 +3,25 @@
     <ui:VisualElement name="MainZone" style="flex-grow: 1; flex-direction: row-reverse; background-color: rgb(93, 134, 255);">
         <ui:VisualElement name="CakeZone" style="flex-grow: 1; flex-direction: column-reverse; flex-wrap: nowrap; -unity-background-image-tint-color: rgb(81, 238, 248);">
             <ui:VisualElement name="CakeFull" style="flex-grow: 1; flex-direction: column; height: 80%; background-image: resource(&apos;Images/tarta&apos;); width: 100%; -unity-background-scale-mode: scale-to-fit; justify-content: flex-start; align-items: flex-start; align-self: flex-start; top: 1px; visibility: visible; display: flex; flex-wrap: nowrap;">
-                <ui:VisualElement name="cereza" style="flex-grow: 1; background-image: resource(&apos;Images/cereza&apos;); height: 150px; width: 150px; left: 419px; top: 68px;" />
-                <ui:VisualElement name="CakeCandle" class="tarta" style="width: 100%; flex-grow: 0; height: 20%; -unity-background-image-tint-color: rgba(255, 255, 255, 0);" />
-                <ui:VisualElement name="estrella0" style="flex-grow: 1; background-image: resource(&apos;Images/estrella0&apos;); width: 133px; height: 150px; left: 378px; top: 139px;" />
-                <ui:VisualElement name="arandanos" style="flex-grow: 1; background-image: resource(&apos;Images/arandanos&apos;); width: 125px; height: 191px;" />
-                <ui:VisualElement name="flor2" style="flex-grow: 1; background-image: resource(&apos;Images/flor2&apos;); width: 150px; height: 246px;" />
-                <ui:VisualElement name="CakeTop" class="tarta" style="width: 44%; flex-grow: 0; height: 20%; align-self: center; background-image: none; scale: 1 1; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; -unity-slice-scale: 5px;" />
-                <ui:VisualElement name="estrella1" style="flex-grow: 1; background-image: resource(&apos;Images/estrella1&apos;); width: 150px; height: 150px;" />
-                <ui:VisualElement name="flor0" style="flex-grow: 1; background-image: resource(&apos;Images/flor0&apos;); width: 150px; height: 246px;" />
-                <ui:VisualElement name="fresa" style="flex-grow: 1; background-image: resource(&apos;Images/fresa&apos;); width: 150px; height: 291px;" />
-                <ui:VisualElement name="flor1" style="flex-grow: 1; background-image: resource(&apos;Images/flor1&apos;); width: 150px; height: 150px;" />
-                <ui:VisualElement name="CakeMid" class="tarta" style="flex-grow: 0; width: 63%; height: 26%; align-self: center;" />
-                <ui:VisualElement name="sirope" style="flex-grow: 1; background-image: resource(&apos;Images/sirope&apos;); width: 150px; height: 150px;" />
-                <ui:VisualElement name="nata" style="flex-grow: 1; background-image: resource(&apos;Images/nata&apos;); width: 150px; height: 150px;" />
-                <ui:VisualElement name="chocolate" style="flex-grow: 1; background-image: resource(&apos;Images/chocolate&apos;); width: 150px; height: 150px;" />
-                <ui:VisualElement name="CakeBottom" class="tarta" style="flex-grow: 0; width: 93%; height: 34%; align-self: center;">
-                    <ui:VisualElement name="CakeTaste" style="flex-grow: 0; flex-direction: column; height: 105%; background-image: none; width: 17%; -unity-background-scale-mode: scale-to-fit; justify-content: flex-start; align-items: flex-start; align-self: flex-start; left: 22%; background-color: rgba(255, 255, 255, 0.58); top: -4px; -unity-text-outline-color: rgba(0, 0, 0, 0);" />
+                <ui:VisualElement name="CakeCandle" class="tarta" style="width: 14%; flex-grow: 0; height: 19%; -unity-background-image-tint-color: rgba(255, 255, 255, 0); flex-direction: row; background-color: rgba(255, 192, 222, 0); left: 50%;">
+                    <ui:VisualElement name="cereza" style="flex-grow: 1; background-image: resource(&apos;Images/cereza&apos;); height: auto; width: auto; left: -161px; top: 57px; visibility: hidden;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CakeTop" class="tarta" style="width: 38%; flex-grow: 0; height: 19%; align-self: center; background-image: none; scale: 1 1; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; -unity-slice-scale: 5px; flex-direction: row; background-color: rgba(255, 192, 222, 0); top: 63px; left: 14px;">
+                    <ui:VisualElement name="estrella0" style="flex-grow: 1; background-image: resource(&apos;Images/estrella0&apos;); width: 133px; height: 150px; left: auto; top: auto; visibility: hidden;" />
+                    <ui:VisualElement name="arandanos" style="flex-grow: 1; background-image: resource(&apos;Images/arandanos&apos;); width: 125px; height: 158px; visibility: hidden; top: 23px;" />
+                    <ui:VisualElement name="flor2" style="flex-grow: 1; background-image: resource(&apos;Images/flor2&apos;); width: 150px; height: 150px; visibility: hidden;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CakeMid" class="tarta" style="flex-grow: 0; width: auto; height: auto; align-self: center; flex-direction: row; background-color: rgba(255, 192, 222, 0); top: 117px;">
+                    <ui:VisualElement name="estrella1" style="flex-grow: 1; background-image: resource(&apos;Images/estrella1&apos;); width: 150px; height: 150px; top: -23px; left: 23px; visibility: hidden;" />
+                    <ui:VisualElement name="flor0" style="flex-grow: 1; background-image: resource(&apos;Images/flor0&apos;); width: 150px; height: 150px; visibility: hidden;" />
+                    <ui:VisualElement name="fresa" style="flex-grow: 1; background-image: resource(&apos;Images/fresa&apos;); width: 151px; height: 171px; top: -12px; visibility: hidden;" />
+                    <ui:VisualElement name="flor1" style="flex-grow: 1; background-image: resource(&apos;Images/flor1&apos;); width: 150px; height: 150px; visibility: hidden;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CakeBottom" class="tarta" style="flex-grow: 0; width: 53%; height: 20%; align-self: center; flex-direction: row; background-color: rgba(255, 192, 222, 0); top: 205px; left: 72px;">
+                    <ui:VisualElement name="CakeTaste" style="flex-grow: 0; flex-direction: column; height: 174%; background-image: none; width: 26%; -unity-background-scale-mode: scale-to-fit; justify-content: flex-start; align-items: flex-start; align-self: flex-start; left: -8%; background-color: rgba(255, 255, 255, 0.58); top: -148px; -unity-text-outline-color: rgba(0, 0, 0, 0); visibility: visible;" />
+                    <ui:VisualElement name="sirope" style="flex-grow: 1; background-image: resource(&apos;Images/sirope&apos;); width: auto; height: auto; visibility: hidden;" />
+                    <ui:VisualElement name="nata" style="flex-grow: 1; background-image: resource(&apos;Images/nata&apos;); width: auto; height: auto; visibility: hidden;" />
+                    <ui:VisualElement name="chocolate" style="flex-grow: 1; background-image: resource(&apos;Images/chocolate&apos;); width: auto; height: auto; visibility: hidden;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="SaveZone" style="flex-grow: 1; flex-direction: row; height: 232px; align-items: center; justify-content: flex-start; align-self: center; margin-top: 16px; margin-right: 16px; margin-bottom: 16px; margin-left: 16px; padding-left: 25px; padding-top: 0;">
