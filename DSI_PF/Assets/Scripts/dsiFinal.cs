@@ -8,21 +8,37 @@ using static Unity.VisualScripting.LudiqRootObjectEditor;
 
 public class dsiFinal : MonoBehaviour
 {
-    VisualElement objDeco1;     // decoraciones
-    VisualElement objDeco2;     // velas
+    VisualElement objDeco1;     // menu decoraciones
+    VisualElement objDeco2;     // menu velas
 
-    Label tarjeta;      // -- tarjeta
-    DropdownField tipoTarjeta; 
+    // -- tarjeta
+    Label tarjeta;              
+    DropdownField tipoTarjeta;
 
-    VisualElement cakeTaste;    // -- sabor tarta
+    // -- sabor tarta
+    VisualElement cakeTaste;    
     Slider sliderR;
     Slider sliderG;
     Slider sliderB;
 
-    TextField inputNombre;      // -- guardar tarta
+    // -- guardar tarta
+    TextField inputNombre;      
     DropdownField cargarNombre;
     Button guardarTarta;
     Button cargarTarta;
+
+    // -- decoraciones
+    VisualElement cereza;       // 0
+    VisualElement estrella0;    // 1
+    VisualElement arandanos;    // 2
+    VisualElement flor2;        // 3
+    VisualElement flor0;        // 4
+    VisualElement fresa;        // 5
+    VisualElement estrella1;    // 6
+    VisualElement flor1;        // 7
+    VisualElement sirope;       // 8
+    VisualElement nata;         // 9
+    VisualElement chocolate;    // 10
 
 
     // Start is called before the first frame update
@@ -56,6 +72,22 @@ public class dsiFinal : MonoBehaviour
 
         // ------- Decoraciones
         objDeco1 = root.Q("ObjDeco1");
+
+        cereza = root.Q("cereza");          // 0
+        estrella0 = root.Q("estrella0");    // 1
+        arandanos = root.Q("arandanos");    // 2
+        flor2 = root.Q("flor2");            // 3
+        flor0 = root.Q("flor0");            // 4
+        fresa = root.Q("fresa");            // 5
+        estrella1 = root.Q("estrella1");    // 6
+        flor1 = root.Q("flor1");            // 7
+        sirope = root.Q("sirope");          // 8
+        nata = root.Q("nata");              // 9
+        chocolate = root.Q("chocolate");    // 10
+
+        // para ocultar =>
+        // chocolate.style.visibility = Visibility.Hidden;
+
         List<VisualElement> oD1List = objDeco1.Children().ToList();
         objDeco1.RegisterCallback<MouseDownEvent>(
         ev =>
@@ -130,6 +162,7 @@ public class dsiFinal : MonoBehaviour
 
         cargarTarta.RegisterCallback<ClickEvent>(x =>
         {
+            if(cargarNombre.index > -1)
             {
                 tarjeta.text = cargarNombre.choices[cargarNombre.index];
             }

@@ -86,7 +86,7 @@
 }
 
 .button:hover {
-    background-color: rgb(238, 55, 55);
+    background-color: rgb(255, 104, 159);
     -unity-text-outline-color: rgb(243, 0, 0);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -98,4 +98,5 @@
     border-bottom-color: rgb(251, 180, 242);
     rotate: -1deg;
     scale: 1.05 1.05;
+    -unity-background-image-tint-color: rgba(255, 104, 159, 0);
 }

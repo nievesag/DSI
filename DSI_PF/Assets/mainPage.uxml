@@ -33,6 +33,10 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="MenuZone" class="zone1" style="flex-grow: 0; width: 40%; position: relative;">
+            <ui:VisualElement name="MenuEtiqueta" class="zones zonesNombre" style="flex-grow: 1; flex-direction: row; width: 100%; height: 10%; justify-content: space-around; align-items: center; align-self: center;">
+                <ui:DropdownField label="TIPO DE ETIQUETA" name="TipoEtiqueta" choices="Normal,Elegante,Punki" index="-1" tabindex="0" style="flex-direction: column; -unity-font-style: bold; -unity-text-align: middle-center; white-space: normal; color: rgb(255, 180, 246); font-size: 18px;" />
+                <ui:TextField picking-mode="Ignore" label="NOMBRE DE LA TARTA" name="NombreTarta" style="flex-direction: column; -unity-text-align: middle-center; -unity-font-style: bold; color: rgb(255, 180, 246); font-size: 18px; background-color: rgba(255, 255, 255, 0);" />
+            </ui:VisualElement>
             <ui:VisualElement name="MenuSabor" class="zones" style="flex-grow: 1; justify-content: space-around; align-self: center; align-items: stretch; height: 30%; width: 100%; flex-wrap: wrap; flex-direction: column; flex-basis: auto; font-size: 20px;">
                 <ui:Label tabindex="-1" text="SABOR DE LA TARTA" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="align-items: center; align-self: flex-start; -unity-font-style: bold; color: rgb(255, 255, 255); font-size: 30px; margin-left: 13px;" />
                 <ui:Slider label="R" high-value="255" name="SliderR" style="background-color: rgb(255, 104, 159); -unity-font-style: bold; white-space: normal; text-overflow: clip; -unity-text-align: middle-center; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px;" />
@@ -54,7 +58,7 @@
             </ui:VisualElement>
             <ui:VisualElement name="MenuDeco1" class="zones" style="flex-grow: 1; align-items: center; justify-content: space-around; align-self: center; width: 100%; height: 30%;">
                 <ui:Label tabindex="-1" text="DECORACIÓN DE LA TARTA" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="align-items: center; align-self: flex-start; -unity-font-style: bold; color: rgb(255, 255, 255); font-size: 30px; -unity-text-align: middle-center; margin-top: 15px; margin-right: 15px; margin-bottom: 15px; margin-left: 15px;" />
-                <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="ScrollView" style="flex-grow: 0;">
+                <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="ScrollView" style="flex-grow: 0; height: 184px;">
                     <ui:VisualElement name="ObjDeco1" style="flex-grow: 1; flex-direction: row; flex-wrap: nowrap; align-self: flex-start; height: 159px;">
                         <ui:VisualElement name="00" class="deco" style="background-image: resource(&apos;Images/nata&apos;); height: 100%;" />
                         <ui:VisualElement name="01" class="deco" style="background-image: resource(&apos;Images/chocolate&apos;); height: 100%;" />
@@ -69,10 +73,6 @@
                         <ui:VisualElement name="010" class="deco" style="background-image: resource(&apos;Images/estrella1&apos;); height: 100%;" />
                     </ui:VisualElement>
                 </ui:ScrollView>
-            </ui:VisualElement>
-            <ui:VisualElement name="MenuEtiqueta" class="zones zonesNombre" style="flex-grow: 1; flex-direction: row; width: 100%; height: 10%; justify-content: space-around; align-items: center; align-self: center;">
-                <ui:DropdownField label="TIPO DE ETIQUETA" name="TipoEtiqueta" choices="Normal,Elegante,Punki" index="-1" tabindex="0" style="flex-direction: column; -unity-font-style: bold; -unity-text-align: middle-center; white-space: normal; color: rgb(255, 180, 246); font-size: 18px;" />
-                <ui:TextField picking-mode="Ignore" label="NOMBRE DE LA TARTA" name="NombreTarta" style="flex-direction: column; -unity-text-align: middle-center; -unity-font-style: bold; color: rgb(255, 180, 246); font-size: 18px; background-color: rgba(255, 255, 255, 0);" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
