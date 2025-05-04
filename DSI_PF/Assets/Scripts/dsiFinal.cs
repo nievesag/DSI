@@ -39,7 +39,7 @@ public class dsiFinal : MonoBehaviour
     VisualElement sirope;       // 8
     VisualElement nata;         // 9
     VisualElement chocolate;    // 10
-    private Color rosa = new Color(1f, 0.408f, 0.624f, 0.72f);
+    private Color rosa = new Color(1f, 0.408f, 0.624f, 0.9f);
 
 
     // Start is called before the first frame update
@@ -135,10 +135,12 @@ public class dsiFinal : MonoBehaviour
                 }
                 aux.style.visibility = Visibility.Visible; // se muestra
 
+                // HOLA
+                // no se si queremos que se queden seleccionados???? igual con el funcionamiento de ahora si????
                 // limpia los ya seleccionados (deja solo el ultimo)
                 for (int i = 0; i < objDeco1.childCount; i++)
                 {
-                    if ((objDeco1[i].style.unityBackgroundImageTintColor == Color.green) &&
+                    if ((objDeco1[i].style.unityBackgroundImageTintColor == rosa) &&
                         ((ev.target as VisualElement) != objDeco1[i]))
                     {
                         objDeco1[i].style.unityBackgroundImageTintColor = Color.white;
