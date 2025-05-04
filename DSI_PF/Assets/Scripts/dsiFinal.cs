@@ -138,6 +138,7 @@ public class dsiFinal : MonoBehaviour
                 // HOLA
                 // no se si queremos que se queden seleccionados???? igual con el funcionamiento de ahora si????
                 // limpia los ya seleccionados (deja solo el ultimo)
+                /*
                 for (int i = 0; i < objDeco1.childCount; i++)
                 {
                     if ((objDeco1[i].style.unityBackgroundImageTintColor == rosa) &&
@@ -146,6 +147,7 @@ public class dsiFinal : MonoBehaviour
                         objDeco1[i].style.unityBackgroundImageTintColor = Color.white;
                     }
                 }
+                */
             }
         });
 
