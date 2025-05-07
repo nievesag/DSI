@@ -49,10 +49,9 @@ public class Dragger : PointerManipulator
         {
             m_PointerId = e.pointerId;
             m_Start = new Vector2(e.position.x, e.position.y);
-            if (!m_wasMoved)
-            {
+            if (!m_wasMoved) {
                 m_wasMoved = true;
-                m_TargetStart = new Vector2(m_Start.x, 0);
+                m_TargetStart = new Vector2(m_Start.x - 150, 0);
             }
             else {
                 m_TargetStart = new Vector2(target.style.left.value.value, target.style.top.value.value);

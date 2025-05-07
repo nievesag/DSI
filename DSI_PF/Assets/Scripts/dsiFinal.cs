@@ -193,6 +193,7 @@ public class dsiFinal : MonoBehaviour
             {
                 cargarNombre.choices.Add(nombres.Last());
                 tarjeta.text = nombres.Last();
+                GuardarJson(nombres.Last());
             }
         });
 
@@ -201,18 +202,55 @@ public class dsiFinal : MonoBehaviour
             if(cargarNombre.index > -1)
             {
                 tarjeta.text = cargarNombre.choices[cargarNombre.index];
+                CargarJson(tarjeta.text);
             }
         });
 
         inputNombre.RegisterCallback<ChangeEvent<string>>(x =>
         {
             nombres.Add(x.newValue);
+            tarjeta.text = x.newValue;
         });
     }
 
-    // Update is called once per frame
-    void Update()
+    void GuardarJson(string tartaName)
     {
-        
+        string jsonPath = System.IO.Path.Combine(Application.persistentDataPath, tartaName);
+
+        TartaData tarta = new TartaData();
+        tarta.Nombre = tartaName;
+        tarta.r = sliderR.value;
+        tarta.g = sliderG.value;
+        tarta.b = sliderB.value;
+        tarta.TarjetaType = tipoTarjeta.index;
+        string toTxt = JsonUtility.ToJson(tarta);
+
+        System.IO.StreamWriter file = System.IO.File.CreateText(jsonPath);
+        file.WriteLine(toTxt);
+        file.Close();
     }
+
+    void CargarJson(string tartaName)
+    {
+        string jsonPath = System.IO.Path.Combine(Application.persistentDataPath, tartaName);
+        if (System.IO.File.Exists(jsonPath))
+        {
+            string jsonString = System.IO.File.ReadAllText(jsonPath);
+            TartaData tarta = JsonUtility.FromJson<TartaData>(jsonString);
+            sliderR.value = tarta.r;
+            sliderG.value = tarta.g;
+            sliderB.value = tarta.b;
+            tipoTarjeta.index = tarta.TarjetaType;
+        }
+    }
+}
+
+[System.Serializable]
+public class TartaData
+{
+    public string Nombre;
+    public float r;
+    public float g;
+    public float b;
+    public int TarjetaType;
 }
