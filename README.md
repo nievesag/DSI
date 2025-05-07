@@ -1,5 +1,5 @@
 # DSI-GDV
-Prácticas. Curso 2024-2025.
+Prácticas y Proyecto Final. Curso 2024-2025. Nieves y Mikele.
 
 | Práctica | Código |
 |:--:|:--:|
