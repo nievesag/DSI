@@ -41,8 +41,6 @@ public class dsiFinal : MonoBehaviour
     VisualElement chocolate;    // 10
     private Color rosa = new Color(1f, 0.408f, 0.624f, 0.9f);
 
-
-    // Start is called before the first frame update
     void Start()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -134,20 +132,6 @@ public class dsiFinal : MonoBehaviour
                     case "010": aux = estrella1; break;
                 }
                 aux.style.visibility = Visibility.Visible; // se muestra
-
-                // HOLA
-                // no se si queremos que se queden seleccionados???? igual con el funcionamiento de ahora si????
-                // limpia los ya seleccionados (deja solo el ultimo)
-                /*
-                for (int i = 0; i < objDeco1.childCount; i++)
-                {
-                    if ((objDeco1[i].style.unityBackgroundImageTintColor == rosa) &&
-                        ((ev.target as VisualElement) != objDeco1[i]))
-                    {
-                        objDeco1[i].style.unityBackgroundImageTintColor = Color.white;
-                    }
-                }
-                */
             }
         });
 
