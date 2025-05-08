@@ -1,2 +1,4 @@
 Enlace al repositorio de Github: 
 	https://github.com/nievesag/DSI
+Versión de unity:
+	2022.3.57f1
